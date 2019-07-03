@@ -1,0 +1,23 @@
+.wrapper__target {
+  padding: 35px 30px;
+  background-color: $colorBlue;
+  border-bottom: 1px solid white;
+  & h2,
+  p {
+    text-transform: uppercase;
+    color: $colorTextWhite;
+  }
+  & h2 {
+    margin-bottom: 35px;
+  }
+  & p {
+    margin-bottom: 12px;
+    font-weight: bold;
+  }
+  & p:nth-child(odd) {
+    margin-bottom: 20px;
+  }
+  & p small {
+    color: $colorBlueText;
+  }
+}

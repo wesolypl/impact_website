@@ -1,0 +1,81 @@
+.wrapper__nav {
+  height: 50px;
+  padding: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.nav__button {
+  position: relative;
+  width: 20px;
+  height: 2px;
+  background-color: $colorTextBlack;
+  border: none;
+  cursor: pointer;
+  outline: none;
+  transition: transform 0.3s ease-in-out;
+  border-radius: 50px;
+  z-index: 10;
+  &::after,
+  &::before {
+    position: absolute;
+    left: 0;
+    content: "";
+    height: 2px;
+    width: 20px;
+    background-color: $colorTextBlack;
+    transition: 0.3s ease-in-out transform;
+    border-radius: 50px;
+  }
+  &::before {
+    top: -6px;
+  }
+  &::after {
+    top: 6px;
+  }
+}
+.nav__button--open {
+  transform: rotate(45deg);
+  &::before {
+    transform: rotate(-90deg) scale(0.4, 1);
+    border-radius: 0 100px 100px 0;
+  }
+  &::after {
+    transform: rotate(90deg) scale(0.4, 1);
+    border-radius: 0 100px 100px 0;
+  }
+}
+.nav__menu {
+  position: absolute;
+  top: 50px;
+  left: 0;
+  padding: 40px 20px;
+  width: 100%;
+  height: calc(100% - 50px);
+  background-color: $colorBg;
+  list-style: none;
+  font-family: "Titillium Web", sans-serif;
+  text-transform: uppercase;
+  transition: 0.5s ease-in-out transform;
+  text-align: right;
+  z-index: 1000;
+  overflow: hidden;
+}
+.menu__item {
+  position: relative;
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 30px;
+  &::after {
+    position: absolute;
+    bottom: -15px;
+    right: 0;
+    content: "";
+    width: 15px;
+    height: 2px;
+    background-color: $colorTextBlack;
+  }
+}
+.nav__menu--hidden {
+  transform: translateX(100%);
+}
