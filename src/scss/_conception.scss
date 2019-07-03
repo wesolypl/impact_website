@@ -1,12 +1,17 @@
 .wrapper__conception {
+  position: relative;
   background-color: $colorTextWhite;
   padding: 35px 30px;
-  h2 {
-    text-transform: uppercase;
-    line-height: 22px;
-    margin-bottom: 35px;
-    span {
-      display: block;
+  z-index: 2;
+}
+@include breakpoint(small) {
+  .wrapper__conception {
+    padding: 40px 35px;
+    margin: 0 15px;
+    border-top-left-radius: 6px;
+    border-top-right-radius: 6px;
+    h2 {
+      margin-bottom: 40px;
     }
   }
 }

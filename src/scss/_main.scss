@@ -1,11 +1,11 @@
 .wrapper__main {
   position: relative;
   width: 100%;
-  padding: 35px 30px 35px 30px;
-  overflow: hidden;
-  z-index: 1;
-  h2,
-  p {
+  padding: 35px 30px;
+
+  // z-index: 1;
+  & h2,
+  & p {
     margin-bottom: 35px;
   }
 }
@@ -21,4 +21,21 @@
   position: absolute;
   bottom: -25%;
   right: -25%;
+}
+@include breakpoint(small) {
+  .wrapper__main {
+    padding: 40px 35px;
+    & p,
+    & h2 {
+      margin-bottom: 40px;
+    }
+  }
+  & p {
+    font-size: 17px;
+  }
+  .main__logo {
+    position: absolute;
+    bottom: -15%;
+    right: -15%;
+  }
 }

@@ -7,3 +7,26 @@ $colorBlueText: #002d69;
 $colorOrange: #ff7600;
 $colorOrangeShadow: #fc7e00;
 @import url("https://fonts.googleapis.com/css?family=Montserrat:300,400,700|Titillium+Web&display=swap&subset=latin-ext");
+
+@mixin breakpoint($point) {
+  @if $point == small {
+    @media (min-width: 576px) {
+      @content;
+    }
+  }
+  @if $point == medium {
+    @media (min-width: 720px) {
+      @content;
+    }
+  }
+  @if $point == large {
+    @media (min-width: 992px) {
+      @content;
+    }
+  }
+  @if $point == extraLarge {
+    @media (min-width: 1200px) {
+      @content;
+    }
+  }
+}

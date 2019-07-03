@@ -1,0 +1,51 @@
+.wrapper__map {
+  display: flex;
+  flex-wrap: wrap;
+  background: linear-gradient(
+    45deg,
+    rgba($color: #051937, $alpha: 0.01) 0%,
+    rgba($color: #06162e, $alpha: 0.01) 20%,
+    rgba($color: #071326, $alpha: 0.01) 45%,
+    rgba($color: #050e1e, $alpha: 0.01) 80%,
+    rgba($color: #020916, $alpha: 0.01) 100%
+  );
+}
+.map__element {
+  flex-basis: 50%;
+  max-width: 50%;
+  padding: 35px 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  h6 {
+    margin-bottom: 30px;
+  }
+  p {
+    font-size: 11px;
+    margin-bottom: 30px;
+    color: #959595;
+  }
+  a {
+    font-size: 11px;
+    margin-bottom: 30px;
+    color: #959595;
+    text-transform: uppercase;
+    text-decoration: none;
+  }
+}
+.map__element:nth-of-type(1),
+.map__element:nth-of-type(3) {
+  border-right: 0.5px solid #ffffff;
+}
+.map__element:nth-of-type(2),
+.map__element:nth-of-type(4) {
+  border-left: 0.5px solid #ffffff;
+}
+.map__element:nth-of-type(1),
+.map__element:nth-of-type(2) {
+  border-bottom: 0.5px solid #ffffff;
+}
+.map__element:nth-of-type(3),
+.map__element:nth-of-type(4) {
+  border-top: 0.5px solid #ffffff;
+}

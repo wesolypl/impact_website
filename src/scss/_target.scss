@@ -17,7 +17,47 @@
   & p:nth-child(odd) {
     margin-bottom: 20px;
   }
+  & p:last-child {
+    margin-bottom: 0px;
+  }
   & p small {
     color: $colorBlueText;
+  }
+  & img {
+    display: none;
+  }
+}
+@include breakpoint(small) {
+  .wrapper__target {
+    position: relative;
+    padding: 40px 35px;
+    margin: 0 15px;
+    overflow: hidden;
+    & h2 {
+      margin-bottom: 40px;
+    }
+    & img {
+      display: block;
+      position: absolute;
+      top: 50%;
+      right: -20%;
+      width: 75%;
+      height: 75%;
+      transform: translateY(-50%);
+      opacity: 0.5;
+    }
+  }
+  .wrapper__target:nth-of-type(odd) {
+    text-align: right;
+    & img {
+      display: block;
+      position: absolute;
+      top: 50%;
+      left: -20%;
+      width: 75%;
+      height: 75%;
+      transform: translateY(-50%);
+      opacity: 0.5;
+    }
   }
 }

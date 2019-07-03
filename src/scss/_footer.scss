@@ -1,0 +1,16 @@
+.wrapper__footer {
+  padding: 35px 30px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  & img {
+    width: 27px;
+    height: 27px;
+    object-fit: cover;
+  }
+  & p {
+    font-size: 8px;
+    flex-basis: 225px;
+    color: #959595;
+  }
+}
