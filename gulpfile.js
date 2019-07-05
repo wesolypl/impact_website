@@ -30,7 +30,7 @@ const path = {
   src: "src/",
   cssin: "src/css/**/*.css",
   jsin: "src/js/**/*.js",
-  imgin: "src/img/**/*.{png.jpg,jpeg,gif}",
+  imgin: "src/img/**/*",
   htmlin: "src/*.html",
   scssin: "src/scss/**/*.scss",
   cssout: "dist/css/",
