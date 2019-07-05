@@ -21,3 +21,14 @@
     height: 100%;
   }
 }
+@include breakpoint(small){
+  .wrapper__reference{
+    padding: 40px 35px;
+    & p{
+      margin-bottom: 40px;
+    }
+  }
+  .table__cell{
+    padding: 15px;
+  }
+}

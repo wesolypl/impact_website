@@ -14,3 +14,17 @@
     color: #959595;
   }
 }
+@include breakpoint(small){
+  .wrapper__footer{
+    padding: 40px 35px;
+    & img{
+      width: 35px;
+      height: 35px;
+    }
+    & p{
+      font-size: 11px;
+      flex-basis: 300px;
+    }
+  }
+  
+}

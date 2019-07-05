@@ -17,3 +17,11 @@
     margin-bottom: 50px;
   }
 }
+@include breakpoint(small) {
+  .wrapper__change {
+    padding: 40px 35px;
+    & h3 {
+      font-size: 19px;
+    }
+  }
+}

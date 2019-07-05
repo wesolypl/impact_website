@@ -1,4 +1,7 @@
 .wrapper__project {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
   padding: 35px 30px;
   p {
     margin-bottom: 35px;
@@ -21,7 +24,11 @@
     object-fit: cover;
   }
 }
-.work__desc {
+.project__work--third,
+.project__work--fourth {
+  display: none;
+}
+.work__box {
   padding: 35px 30px;
   & h3 {
     font-size: 13px;
@@ -62,6 +69,9 @@
     }
   }
 }
+.work__box--desc {
+  display: none;
+}
 .project__btn {
   position: relative;
   bottom: 0;
@@ -86,7 +96,8 @@
       height: 285px;
     }
   }
-  .work__desc {
+
+  .work__box {
     padding: 25px 35px;
     & h3 {
       font-size: 16px;
@@ -107,5 +118,42 @@
         height: 22.5px;
       }
     }
+  }
+}
+
+@include breakpoint(medium) {
+  .wrapper__project {
+    justify-content: space-between;
+  }
+  .project__work--first {
+    display: flex;
+    & img {
+      flex-basis: 70%;
+      width: 70%;
+      height: 100%;
+      flex-grow: 1;
+    }
+    & .work__box {
+      flex-basis: 30%;
+      display: flex;
+      flex-wrap: wrap;
+      & button {
+        align-self: flex-end;
+      }
+      & .work__box--desc {
+        display: block;
+        max-height: 60%;
+        overflow: hidden;
+        font-size: 14px !important;
+      }
+    }
+  }
+
+  .project__work--second,
+  .project__work--third {
+    width: 49%;
+  }
+  .project__work--third {
+    display: block;
   }
 }

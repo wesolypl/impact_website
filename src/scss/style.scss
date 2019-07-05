@@ -17,6 +17,9 @@
   user-select: none;
   outline: none;
 }
+html {
+  overflow-x: hidden;
+}
 .wrapper {
   position: absolute;
   top: 0;
@@ -24,7 +27,9 @@
   width: 100%;
   min-height: 100vh;
   background-color: $colorBg;
-  overflow-x: hidden;
+  // clip-path: inset(0);
+
+  // clip: rect(0, auto, auto, 0);
 }
 h2 {
   font-family: "Titillium Web", sans-serif;
@@ -110,20 +115,26 @@ a {
   font-family: "Montserrat", sans-serif;
 }
 .tiles__tile--blue {
-  padding: 10px 20px;
   background-color: $colorBlue;
-  margin: 0 10px 10px 0;
-  box-shadow: rgba($color: #000000, $alpha: 0.13) 0 2px 4px;
-  text-transform: uppercase;
-  font-size: 12px;
-  font-weight: bold;
-  letter-spacing: 1px;
-  font-family: "Montserrat", sans-serif;
   color: $colorTextWhite;
 }
 @include breakpoint(small) {
   h2 {
     margin-bottom: 40px;
     font-size: 26px;
+  }
+}
+@include breakpoint(small) {
+  .btn {
+    font-size: 14px;
+  }
+  .container__tiles {
+    & h3 {
+      font-size: 19px;
+      margin-bottom: 16px;
+    }
+  }
+  .tiles__tile {
+    font-size: 13px;
   }
 }

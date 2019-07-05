@@ -15,7 +15,7 @@ $colorOrangeShadow: #fc7e00;
     }
   }
   @if $point == medium {
-    @media (min-width: 720px) {
+    @media (min-width: 768px) {
       @content;
     }
   }

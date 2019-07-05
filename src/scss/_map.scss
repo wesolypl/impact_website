@@ -17,15 +17,15 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  h6 {
+  & h6 {
     margin-bottom: 30px;
   }
-  p {
+  & p {
     font-size: 11px;
     margin-bottom: 30px;
     color: #959595;
   }
-  a {
+  & a {
     font-size: 11px;
     margin-bottom: 30px;
     color: #959595;
@@ -48,4 +48,14 @@
 .map__element:nth-of-type(3),
 .map__element:nth-of-type(4) {
   border-top: 0.5px solid #ffffff;
+}
+@include breakpoint(small){
+  .map__element{
+    & h6{
+      font-size: 13px;
+    }
+    & p, & a{
+      font-size: 14px;
+    }
+  }
 }
